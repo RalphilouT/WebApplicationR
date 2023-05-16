@@ -1,0 +1,150 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+.WorkHeading {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 4rem 0 2rem 0;
+}
+
+.WorkContainer {
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    /*Grid Adjustment*/
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 40px;
+    padding-bottom: 5rem;
+}
+
+.WorkCard {
+    background: rgb(102, 101, 101);
+    padding: 1.2rem 1rem;
+}
+
+    .WorkCard img {
+        width: 100%;
+    }
+
+.WorkTitle {
+    color: rgb(14, 13, 13);
+    padding: 1rem;
+    text-align: center;
+}
+/* .icons{
+    display: flex;
+    justify-content: space-between;
+    
+} */
+.WorkDetails p {
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.WorkButtons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+    .WorkButtons .button1 {
+        padding: 0.5rem 1rem;
+    }
+
+.WorkPicture {
+    justify-content: space-between;
+    display: flex;
+    transition: 0.8s;
+}
+
+    .WorkPicture .IMAGE {
+        padding-left: 5%;
+        z-index: 6;
+    }
+
+.WorkButtons .icons {
+    z-index: 5;
+}
+/* .WorkPicture:hover{
+    transform: scale(2);
+    transition: 0.8s;
+} */
+.WorkPictureZoom {
+    transform: scale(1.5);
+    transition: 0.8s;
+    justify-content: space-between;
+    display: flex;
+}
+
+@media screen and (max-width: 740px) {
+    .WorkContainer {
+        max-width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+        text-align: center;
+    }
+
+    .WorkPictureZoom {
+        transform: scale(1.2);
+        transition: 0.8s;
+        justify-content: space-between;
+        display: flex;
+    }
+}

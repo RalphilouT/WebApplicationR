@@ -15,6 +15,7 @@ namespace WebApplicationResume.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 

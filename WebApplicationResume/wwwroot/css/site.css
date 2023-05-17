@@ -72,7 +72,7 @@ button.accept-policy {
 }
 
 .WorkCard {
-    background: rgb(102, 101, 101);
+    background-color:darkcyan;
     padding: 1.2rem 1rem;
 }
 
@@ -94,6 +94,7 @@ button.accept-policy {
     padding-bottom: 1rem;
     font-size: 1rem;
     text-align: justify;
+    color:black;
 }
 
 .WorkButtons {
@@ -112,10 +113,10 @@ button.accept-policy {
     transition: 0.8s;
 }
 
-    .WorkPicture .IMAGE {
-        padding-left: 5%;
-        z-index: 6;
-    }
+.WorkPicture .IMAGE {
+    padding-left: 5%;
+    z-index: 6;
+}
 
 .WorkButtons .icons {
     z-index: 5;
@@ -130,6 +131,126 @@ button.accept-policy {
     justify-content: space-between;
     display: flex;
 }
+.imageHome { 
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.introImage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+   
+    object-fit: cover;
+}
+
+.content p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    display: block;
+}
+/*Image opacity*/
+.imageHome::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #616161;
+    opacity: 0.5;
+}
+/*Image size*/
+.hero1 {
+    height: 100%;
+    width: 100%;
+}
+
+    /*Text in front of image adjustment*/
+.hero1 .content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+.hero1 .content h1 {
+    font-size: 4rem;
+    padding: 0.6rem 0 1.5rem;
+    color: black;
+}
+
+.hero1 .content p {
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    color:black;
+}
+
+/*Button adjusment */
+.content .btn {
+    margin: 1rem 0.3rem;
+}
+
+.content .button1 {
+    margin: 1rem 0.3rem;
+}
+
+.introIMAGE2 {
+    width: 100%;
+    background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    height: 60vh; /*Makes the heading bigger*/
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.introIMAGE2::before {
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.introIMAGE2::after {
+    content: "";
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    background-size: cover;
+    background-color: #919191;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+}
+
+.header h1 {
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.header p {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    display: flex; /*Makes paragraph and header text at the same*/
+    flex-direction: column; /*Makes flex column*/
+    align-items: center; /* Center of header*/
+    justify-content: center; /*center of the header*/
+    transform: translate(0%, -200%);
+}
+
+
 
 @media screen and (max-width: 740px) {
     .WorkContainer {
@@ -146,5 +267,25 @@ button.accept-policy {
         transition: 0.8s;
         justify-content: space-between;
         display: flex;
+    }
+    .hero1 .content h1 {
+        font-size: 3rem;
+        
+    }
+
+    .hero1 .content p {
+        font-size: 1.4rem;
+        
+    }
+    .header h1 {
+        font-size: 2rem;
+        color: rgb(15, 15, 15);
+        background-size: cover;
+    }
+
+    .header p {
+        font-size: 1rem;
+        text-align: center;
+        color: rgb(8, 8, 8);
     }
 }

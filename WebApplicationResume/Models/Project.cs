@@ -12,19 +12,16 @@ namespace WebApplicationResume.Models
         [DisplayName("Title")]//Displays Name instead of name when validation is required
         public string title { get; set; }
 
-        public double gpa { get; set; }
-
-        [Required]
-        [DisplayName("City")]//Displays Name instead of name when validation is required
-        public string city { get; set; }
-
-        [Required]
-        [DisplayName("Diploma")]//Displays Name instead of name when validation is required
-        public string diploma { get; set; }
 
         [Required]
         [DisplayName("Content")]//Displays Name instead of name when validation is required
         public string content { get; set; }
+
+        [Required]
+        [DisplayName("Source")]//Displays Name instead of name when validation is required
+        public string source { get; set; }
+
+        
 
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }

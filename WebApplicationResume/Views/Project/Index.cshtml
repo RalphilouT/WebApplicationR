@@ -1,11 +1,32 @@
-﻿
+﻿@model IEnumerable<Project>
 @{
     ViewData["Title"] = "Index";
 }
+<partial name="_Header" />
+<div class="WorkGrid">
+    <h1 class="WorkHeading">
+        Projects
+    </h1>
+    <div class="WorkContainer">
+        @foreach(var obj in Model)
+        {
+            <div class="WorkCard">
+                <div class="IMAGE">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Workcardimage" />
 
-<h1>Index</h1>
-<div class="WordCard">
+                </div>
+                <h2 class="WorkTitle">@obj.title</h2>
+                <div class="WorkDetails">
+                    <p>
+                        @obj.content
+                    </p>
+                    <div class="WorkButtons">
+                            <a href=@obj.source class="btn btn-primary">Source</a>
+                    </div>
+                </div>
+            </div>
+        }
+ </div>
+ </div>
 
-    <p>Hello</p>
-</div>
 

@@ -10,7 +10,7 @@ namespace WebApplicationResume.Data
         {
 
         }
-        public DbSet<Project> Categories { get; set; }
+        public DbSet<Project> Project { get; set; }
 
     }
 }

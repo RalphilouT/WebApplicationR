@@ -48,11 +48,8 @@ button.accept-policy {
     line-height: inherit;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
+.footers {
+
     line-height: 60px;
 }
 .WorkHeading {
@@ -76,9 +73,9 @@ button.accept-policy {
     padding: 1.2rem 1rem;
 }
 
-    .WorkCard img {
-        width: 100%;
-    }
+.WorkCard img {
+    width: 100%;
+}
 
 .WorkTitle {
     color: rgb(14, 13, 13);
@@ -103,9 +100,9 @@ button.accept-policy {
     padding: 0.5rem 0;
 }
 
-    .WorkButtons .button1 {
-        padding: 0.5rem 1rem;
-    }
+.WorkButtons .button1 {
+    padding: 0.5rem 1rem;
+}
 
 .WorkPicture {
     justify-content: space-between;
@@ -170,7 +167,7 @@ button.accept-policy {
     /*Text in front of image adjustment*/
 .hero1 .content {
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -200%);
     top: 50%;
     left: 50%;
     text-align: center;
@@ -231,13 +228,13 @@ button.accept-policy {
 
 .header h1 {
     font-size: 4rem;
-    color: rgba(0, 0, 0, 0.85);
+    color: black;
 }
 
 .header p {
     font-size: 2rem;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: black;
 }
 
 .header {
@@ -248,6 +245,132 @@ button.accept-policy {
     align-items: center; /* Center of header*/
     justify-content: center; /*center of the header*/
     transform: translate(0%, -200%);
+}
+
+.AboutPage {
+    width: 100%;
+    margin: 3rem 0rem; /*top/bottom left/right*/
+    display: flex; /*one row*/
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap; /*One Column*/
+    height: 100%;
+}
+    /*Padding represents the amount of inner space an element has, 
+while the margin is whitespace available surrounding an element.*/
+.AboutPage .LeftSide {
+    text-align: center;
+    margin: auto; /*space between div*/
+    padding: 1rem; /*affects text*/
+    max-width: 350px;
+}
+
+.AboutPage h1 {
+    color: black;
+}
+
+.AboutPage .LeftSide p {
+    margin: 1.2rem 0;
+    color:black;
+}
+
+.AboutPage .RightSide {
+    max-width: 700px;
+}
+
+/*Picture Stacking*/
+.RightSide .imagecontainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+
+.RightSide .image {
+    max-width: 50%;
+    border: 1px solid #333;
+}
+
+.RightSide .imagetop {
+    grid-column: 1 / span 8;
+    grid-row: 1;
+    padding-top: 20%;
+    z-index: 6;
+}
+
+.RightSide .imagebottom {
+    grid-column: 4 / -3; /*How big the grid are*/
+    grid-row: 1;
+    z-index: 5;
+}
+.footers {
+    width: 100%;
+    padding: 6rem 0;
+    background-color:darkslategrey;
+    height:130%;
+}
+
+.footerContent {
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    /*grid adjustment*/
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 40px;
+}
+
+.Picture {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.leftSide {
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.footers .home, .email, .phone {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.leftSide h4 {
+    margin-left: 0rem;
+    margin-right: auto;
+}
+.rightSide p, h1, h4 {
+    line-height: 30px;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.footers .rightSide {
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.rightSide .social {
+    margin-top: 1rem;
+    padding: 0.5rem 0rem;
+    text-align: center;
+}
+
+
+
+.footers h4 {
+    font-size: 1.2rem;
+    padding-bottom: 0.7rem;
 }
 
 
@@ -279,7 +402,7 @@ button.accept-policy {
     }
     .header h1 {
         font-size: 2rem;
-        color: rgb(15, 15, 15);
+        color: black;
         background-size: cover;
     }
 
@@ -287,5 +410,39 @@ button.accept-policy {
         font-size: 1rem;
         text-align: center;
         color: rgb(8, 8, 8);
+    }
+    .footers h1 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footerContent {
+        /*grid adjustment*/
+        grid-template-columns: 1fr;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footerContent .leftSide {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footers .Picture {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .rightSide .social {
+        margin-top: 1rem;
+        padding: 0.5rem 0rem;
+        text-align: center;
     }
 }

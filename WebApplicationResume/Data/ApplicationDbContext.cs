@@ -11,6 +11,7 @@ namespace WebApplicationResume.Data
 
         }
         public DbSet<Project> Project { get; set; }
+        public DbSet<Education> Education { get; set; }
 
     }
 }

@@ -25,4 +25,8 @@
 	<ItemGroup>
 	  <None Include="Views\Project\Index.cshtml" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Migrations\" />
+	  <Folder Include="wwwroot\Image\" />
+	</ItemGroup>
 </Project>

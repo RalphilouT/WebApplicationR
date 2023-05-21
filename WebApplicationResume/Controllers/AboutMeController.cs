@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplicationResume.Data;
+using WebApplicationResume.Models;
 
 namespace WebApplicationResume.Controllers
 {
@@ -13,9 +14,8 @@ namespace WebApplicationResume.Controllers
         }
         public IActionResult Index()
         {
-            //IEnumerable<Project> objProjectList = _db.Project;
-            return View();
-            //return View(objProjectList);
+            IEnumerable<Education> objEducationList = _db.Education;
+            return View(objEducationList);
         }
     }
 }

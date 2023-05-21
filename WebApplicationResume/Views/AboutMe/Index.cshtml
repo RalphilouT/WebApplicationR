@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Education>
 @{
     ViewData["Title"] = "Index";
 }
@@ -31,7 +31,31 @@
             </div>
         </div>
         </div>
-        
+        <div class="cardGrid">
+            <h1 class="EducationHeading">School History</h1>
+            <div class="cardcontainer1">
+        @foreach (var obj in Model)
+        {
+            
+                
+                    <div class="cards">
+                        <div class="SchoolLogo">
+                            <img src="~/Image/@obj.logo"+  alt=@obj.logo/>
+                     </div>
+                     <a href=@obj.website>
+                         @obj.title
+                     </a>
+                        <p className="GPA">@obj.gpa</p>
+                        <p className="City">@obj.city</p>
+                    <p className="Diploma">@obj.diploma</p>
+                    <p className="AboutSection">@obj.content</p>
+                      
+                </div>
+            
+        }
+        </div>
+            
+        </div>
 </div>
 
 

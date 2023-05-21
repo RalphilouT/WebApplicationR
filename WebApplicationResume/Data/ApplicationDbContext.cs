@@ -1,6 +1,7 @@
 ﻿
 using WebApplicationResume.Models;
 using Microsoft.EntityFrameworkCore;
+using WebApplicationResume.Controllers;
 
 namespace WebApplicationResume.Data
 {
@@ -12,6 +13,8 @@ namespace WebApplicationResume.Data
         }
         public DbSet<Project> Project { get; set; }
         public DbSet<Education> Education { get; set; }
+
+        public DbSet<Contact> Contact { get; set; }
 
     }
 }

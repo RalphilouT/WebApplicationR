@@ -9,6 +9,10 @@ namespace WebApplicationResume.Models
         public int id { get; set; }
 
         [Required]
+        [DisplayName("Logo of School")]//Displays Name instead of name when validation is required
+        public string logo { get; set; }
+
+        [Required]
         [DisplayName("School")]//Displays Name instead of name when validation is required
         public string title { get; set; }
 

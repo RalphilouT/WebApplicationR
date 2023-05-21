@@ -1,0 +1,62 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Submit";
+}
+<partial name="_Notification" />
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+</head>
+<form method="post">
+            <div class="border p-3 mt-4" id="user">
+                <div class="row pb-2">
+                    <h2 class="text-primary">Contact Form</h2>
+                    <hr />
+                </div>
+                <div asp-validation-summary="All"></div>
+                <div class="mb-3">
+                    <label asp-for="name">Name</label>
+                    <br />
+
+                    <input asp-for="name" class="form-control" />
+                    <span asp-validation-for="name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="email">Email</label>
+                    <br />
+
+                    <input asp-for="email" class="form-control" />
+                    <span asp-validation-for="email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="subject">Subject</label>
+                    <br />
+
+                    <input asp-for="subject" class="form-control" />
+                    <span asp-validation-for="subject" class="text-danger"></span>
+
+                </div>
+                <div class="mb-3">
+                    <label asp-for="message">Message</label>
+                    <br />
+                    <textarea rows="6" placeholder="Type your message here" class="form-control" asp-for="message"></textarea>
+
+                    
+                    <span asp-validation-for="message" class="text-danger"></span>
+
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:150px">Submit</button>
+
+            </div>
+        </form>
+@{
+    //client side validation
+    //Have to be in cs due to scripts
+    //Only server side validation is done when bypass of client side validation
+}
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+

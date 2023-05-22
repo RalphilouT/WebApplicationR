@@ -484,7 +484,17 @@ form input, form textarea {
     border-color: gray;
     color: white;
 }
-
+.introWeb{
+    background-size:cover;
+    
+    margin-bottom:1000px;
+}
+.introName{
+    text-align:center;
+    padding: 300px 0px;
+    font-size: 100px
+    
+}
 @media screen and (max-width: 740px) {
     .WorkContainer {
         max-width: 90%;

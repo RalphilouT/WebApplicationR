@@ -1,12 +1,22 @@
 ﻿
 $(document).ready(function () {
-    $("input").focus(function () {
-        $(this).css("background-color", "yellow");
+    $(".introWeb").mouseenter(function () {
+        $(".introWeb").hide();
     });
-    $("input").blur(function () {
-        $(this).css("background-color", "green");
+$("input").focus(function () {
+    $(this).css("background-color", "yellow");
     });
-   
+$("input").blur(function () {
+    $(this).css("background-color", "green");
+    });
+$("textarea").focus(function () {
+    $(this).css("background-color", "yellow");
+    });
+$("textarea").blur(function () {
+    $(this).css("background-color", "green");
+    });
 });
+
+
 
 
